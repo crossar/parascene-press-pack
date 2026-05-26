@@ -14,7 +14,7 @@ body {
 .page {
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
   padding: 40px 32px;
   background:
     radial-gradient(
@@ -31,24 +31,48 @@ body {
 }
 
 .sideArt {
-  position: absolute;
+  position: fixed;
   top: 0;
-  width: 260px;
-  height: 620px;
-  opacity: 0.55;
+  width: 360px;
+  height: 100vh;
+  opacity: 0.95;
   z-index: 0;
-  border-radius: 0 0 28px 28px;
-  filter: blur(0.2px);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.sideArt::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 2, 8, 0.12);
+}
+
+.sideArt::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 .sideLeft {
   left: 0;
-  background: linear-gradient(135deg, #1e1b4b, #581c87, #020617);
+  background-image: url("/side-left.png");
+  border-right: 1px solid rgba(168, 85, 247, 0.35);
 }
 
 .sideRight {
   right: 0;
-  background: linear-gradient(135deg, #020617, #0f172a, #581c87);
+  background-image: url("/side-right.png");
+  border-left: 1px solid rgba(168, 85, 247, 0.35);
+}
+
+.sideLeft::after {
+  background: linear-gradient(to right, rgba(2, 2, 8, 0), rgba(2, 2, 8, 0.75));
+}
+
+.sideRight::after {
+  background: linear-gradient(to left, rgba(2, 2, 8, 0), rgba(2, 2, 8, 0.75));
 }
 
 .hero,
