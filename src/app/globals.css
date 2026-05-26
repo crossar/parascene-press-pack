@@ -305,3 +305,117 @@ footer strong {
     gap: 15px;
   }
 }
+
+/* mobile web reposive */
+
+@media (max-width: 1200px) {
+  .sideArt {
+    width: 300px;
+  }
+
+  .infoPanel,
+  .screenshots,
+  .bottomGrid,
+  footer {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 900px) {
+  .page {
+    padding: 28px 18px;
+  }
+
+  .sideArt {
+    display: none;
+  }
+
+  .logoRow {
+    gap: 12px;
+  }
+
+  .logoMark {
+    width: 42px;
+    height: 42px;
+    font-size: 24px;
+  }
+
+  .brand {
+    font-size: 34px;
+    letter-spacing: 5px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+
+  .intro {
+    font-size: 15px;
+  }
+
+  .scanCard {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    text-align: center;
+    padding: 22px;
+  }
+
+  .scanCard h3 {
+    font-size: 30px;
+  }
+
+  .qrReal {
+    height: auto;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .infoPanel,
+  .bottomGrid,
+  .shotGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .miniCard {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .miniCard:last-child {
+    border-bottom: none;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    letter-spacing: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand {
+    font-size: 26px;
+    letter-spacing: 3px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .scanCard h3 {
+    font-size: 26px;
+  }
+
+  .infoPanel,
+  .screenshots,
+  .bottomGrid,
+  footer {
+    padding: 20px;
+  }
+}
