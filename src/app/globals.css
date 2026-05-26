@@ -33,13 +33,14 @@ body {
 .sideArt {
   position: fixed;
   top: 0;
-  width: 360px;
+  width: 520px;
   height: 100vh;
   opacity: 0.95;
   z-index: 0;
   overflow: hidden;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .sideArt::before {
@@ -58,12 +59,16 @@ body {
 .sideLeft {
   left: 0;
   background-image: url("/side-left.png");
+  background-size: cover;
+  background-position: center;
   border-right: 1px solid rgba(168, 85, 247, 0.35);
 }
 
 .sideRight {
   right: 0;
   background-image: url("/side-right.png");
+  background-size: cover;
+  background-position: center;
   border-left: 1px solid rgba(168, 85, 247, 0.35);
 }
 
@@ -80,12 +85,13 @@ body {
 .screenshots,
 .bottomGrid,
 footer {
+  max-width: 980px;
   position: relative;
   z-index: 2;
 }
 
 .hero {
-  max-width: 1100px;
+  max-width: 860px;
   margin: 0 auto 28px;
   text-align: center;
 }
