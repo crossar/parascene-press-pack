@@ -91,10 +91,21 @@ export default function Home() {
       <section className="screenshots">
         <h3>Screenshots</h3>
         <div className="shotGrid">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div className="shotCard">
+            <img src="/screenshots/home.png" alt="Parascene Home" />
+          </div>
+
+          <div className="shotCard">
+            <img src="/screenshots/generator.png" alt="Parascene Generator" />
+          </div>
+
+          <div className="shotCard">
+            <img src="/screenshots/gallery.png" alt="Parascene Gallery" />
+          </div>
+
+          <div className="shotCard">
+            <img src="/screenshots/community.png" alt="Parascene Community" />
+          </div>
         </div>
       </section>
 
