@@ -66,7 +66,7 @@ body {
 
 .sideRight {
   right: 0;
-  background-image: url("/side-right.png");
+  background-image: url("/side-right.jpg");
   background-size: cover;
   background-position: center;
   border-left: 1px solid rgba(168, 85, 247, 0.35);
