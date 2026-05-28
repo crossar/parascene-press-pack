@@ -14,7 +14,7 @@ export default function Home() {
         </div>
 
         <h1>
-          PRESS <span>PACK</span>
+          PRESS <span>KIT</span>
         </h1>
 
         <p className="subtitle">AI CREATIVITY PLAYGROUND</p>
@@ -29,7 +29,7 @@ export default function Home() {
             <h3>
               SCAN TO <br />
               VIEW OUR <br />
-              <span>PRESS PACK</span>
+              <span>PRESS KIT</span>
             </h3>
 
             <div className="purpleLine"></div>
