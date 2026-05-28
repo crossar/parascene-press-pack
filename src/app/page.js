@@ -22,7 +22,7 @@ export default function Home() {
 
         <div className="scanCard printCard">
           <div className="printBrandBlock">
-            <div className="hexLogo">
+            <div className="printLogo">
               <img src="/parascene-logo.png" alt="Parascene Logo" />
             </div>
 
