@@ -20,23 +20,31 @@ export default function Home() {
         <p className="subtitle">AI CREATIVITY PLAYGROUND</p>
         <p className="intro">Everything you need to write about Parascene.</p>
 
-        <div className="scanCard">
-          <div>
+        <div className="scanCard printCard">
+          <div className="printBrandBlock">
+            <div className="hexLogo">
+              <img src="/parascene-logo.png" alt="Parascene Logo" />
+            </div>
+
             <h3>
               SCAN TO <br />
               VIEW OUR <br />
               <span>PRESS PACK</span>
             </h3>
+
+            <div className="purpleLine"></div>
+
             <p>
               Instant access to our media kit, assets, screenshots and more.
             </p>
+
             <a href="https://www.parascene.com">www.parascene.com</a>
           </div>
 
           <div className="qrReal">
             <QRCodeCanvas
               value="https://www.parascene.com"
-              size={220}
+              size={250}
               bgColor="#ffffff"
               fgColor="#000000"
               level="H"

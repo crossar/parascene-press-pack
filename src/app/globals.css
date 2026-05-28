@@ -16,6 +16,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   padding: 40px 32px;
+
   background:
     radial-gradient(
       circle at top left,
@@ -30,6 +31,8 @@ body {
     linear-gradient(180deg, #050510, #020204);
 }
 
+/* SIDE ART */
+
 .sideArt {
   position: fixed;
   top: 0;
@@ -39,7 +42,6 @@ body {
   z-index: 0;
   overflow: hidden;
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -59,7 +61,6 @@ body {
 .sideLeft {
   left: 0;
   background-image: url("/side-left.png");
-  background-size: cover;
   background-position: 22% center;
   border-right: 1px solid rgba(168, 85, 247, 0.35);
 }
@@ -67,7 +68,6 @@ body {
 .sideRight {
   right: 0;
   background-image: url("/side-right.jpg");
-  background-size: cover;
   background-position: 78% center;
   border-left: 1px solid rgba(168, 85, 247, 0.35);
 }
@@ -80,12 +80,13 @@ body {
   background: linear-gradient(to left, rgba(2, 2, 8, 0), rgba(2, 2, 8, 0.75));
 }
 
+/* MAIN */
+
 .hero,
 .infoPanel,
 .screenshots,
 .bottomGrid,
 footer {
-  max-width: 980px;
   position: relative;
   z-index: 2;
 }
@@ -95,6 +96,17 @@ footer {
   margin: 0 auto 28px;
   text-align: center;
 }
+
+.infoPanel,
+.screenshots,
+.bottomGrid,
+footer {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* HEADER */
 
 .logoRow {
   display: flex;
@@ -116,27 +128,26 @@ footer {
 }
 
 .brand {
-  letter-spacing: 8px;
-  font-size: 60px;
   margin: 0;
+  font-size: 60px;
+  letter-spacing: 8px;
 }
 
 h1 {
-  font-size: clamp(30px, 10vw, 20px);
-  line-height: 0.9;
   margin: 0;
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 0.9;
   letter-spacing: 4px;
 }
 
-h1 span,
-.scanCard span {
+h1 span {
   color: #a855f7;
 }
 
 .subtitle {
+  margin-top: 24px;
   color: #c084fc;
   letter-spacing: 12px;
-  margin-top: 24px;
   font-weight: bold;
 }
 
@@ -145,59 +156,114 @@ h1 span,
   font-size: 18px;
 }
 
-.scanCard {
+/* SCAN CARD */
+
+/* SCAN CARD */
+
+.printCard {
   margin: 34px auto 0;
-  max-width: 720px;
-  padding: 28px;
+  max-width: 900px;
+  min-height: 300px;
+  padding: 34px 44px;
   display: grid;
-  grid-template-columns: 1fr 260px;
-  gap: 28px;
+  grid-template-columns: 1fr 300px;
+  gap: 44px;
   align-items: center;
   text-align: left;
   border: 1px solid #8b5cf6;
-  border-radius: 24px;
-  background: rgba(3, 3, 12, 0.9);
-  box-shadow: 0 0 35px rgba(168, 85, 247, 0.45);
+  border-radius: 28px;
+  background:
+    linear-gradient(rgba(3, 3, 12, 0.94), rgba(3, 3, 12, 0.97)),
+    radial-gradient(circle at left, rgba(168, 85, 247, 0.22), transparent 35%);
+  box-shadow: 0 0 38px rgba(168, 85, 247, 0.4);
 }
 
-.scanCard h3 {
-  font-size: 36px;
-  margin: 0 0 14px;
-  line-height: 1.1;
+.printBrandBlock {
+  display: grid;
+  grid-template-columns: 115px 1fr;
+  gap: 22px;
+  align-items: center;
 }
 
-.scanCard p {
+.hexLogo {
+  width: 115px;
+  height: 115px;
+  display: grid;
+  place-items: center;
+}
+
+.hexLogo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+.printBrandBlock h3 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.printBrandBlock h3 span {
+  color: #a855f7;
+}
+
+.purpleLine {
+  grid-column: 1 / -1;
+  width: 100%;
+  height: 1px;
+  margin: 8px 0 0;
+  background: linear-gradient(90deg, transparent, #a855f7, transparent);
+}
+
+.printBrandBlock p {
+  grid-column: 1 / -1;
+  max-width: 430px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
   color: #d1d5db;
 }
 
-.scanCard a {
-  display: inline-block;
-  margin-top: 10px;
+.printBrandBlock a {
+  grid-column: 1 / -1;
+  width: fit-content;
   color: white;
   background: linear-gradient(90deg, #7c3aed, #a855f7);
-  padding: 12px 18px;
-  border-radius: 10px;
+  padding: 12px 20px;
+  border-radius: 11px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 16px;
 }
 
 .qrReal {
-  height: 260px;
+  width: 300px;
+  height: 300px;
   background: white;
   display: grid;
   place-items: center;
-  border-radius: 12px;
-  padding: 18px;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.35);
 }
 
+/* INFO PANEL */
+
 .infoPanel {
-  max-width: 1200px;
-  margin: 28px auto 0;
+  margin-top: 28px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 22px;
+
   padding: 24px;
+
   background: rgba(255, 255, 255, 0.045);
 }
 
@@ -222,12 +288,16 @@ li {
   line-height: 1.5;
 }
 
+/* SCREENSHOTS */
+
 .screenshots {
-  max-width: 1200px;
-  margin: 28px auto 0;
+  margin-top: 28px;
+
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 22px;
+
   padding: 24px;
+
   background: rgba(255, 255, 255, 0.035);
 }
 
@@ -241,8 +311,11 @@ li {
   position: relative;
   height: 260px;
   overflow: hidden;
+
   border-radius: 14px;
+
   border: 1px solid rgba(192, 132, 252, 0.45);
+
   background: #050510;
 }
 
@@ -258,29 +331,40 @@ li {
   transform: scale(1.04);
 }
 
+/* BOTTOM GRID */
+
 .bottomGrid {
-  max-width: 1200px;
-  margin: 28px auto 0;
+  margin-top: 28px;
+
   display: grid;
   grid-template-columns: 1fr 1.1fr 1fr;
+
   gap: 22px;
 }
 
 .largeCard {
   min-height: 220px;
+
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 18px;
+
   padding: 26px;
+
   background: rgba(255, 255, 255, 0.045);
 }
 
+/* FOOTER */
+
 footer {
-  max-width: 1200px;
-  margin: 35px auto 0;
+  margin-top: 35px;
+
   padding: 30px;
+
   display: flex;
   justify-content: space-between;
+
   letter-spacing: 8px;
+
   color: #c084fc;
 }
 
@@ -288,39 +372,32 @@ footer strong {
   color: white;
 }
 
-@media (max-width: 900px) {
-  .sideArt {
+/* PRINT */
+
+@media print {
+  .page {
+    background: white;
+    padding: 0;
+  }
+
+  .sideArt,
+  .infoPanel,
+  .screenshots,
+  .bottomGrid,
+  footer,
+  .hero > .logoRow,
+  .hero > h1,
+  .hero > .subtitle,
+  .hero > .intro {
     display: none;
   }
 
-  .scanCard,
-  .infoPanel,
-  .bottomGrid,
-  .shotGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .miniCard {
-    border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  }
-
-  .miniCard:last-child {
-    border-bottom: none;
-  }
-
-  .subtitle,
-  footer {
-    letter-spacing: 4px;
-  }
-
-  footer {
-    flex-direction: column;
-    gap: 15px;
+  .scanCard {
+    box-shadow: none;
   }
 }
 
-/* mobile web reposive */
+/* TABLET */
 
 @media (max-width: 1200px) {
   .sideArt {
@@ -334,6 +411,8 @@ footer strong {
     max-width: 900px;
   }
 }
+
+/* MOBILE */
 
 @media (max-width: 900px) {
   .page {
@@ -372,20 +451,39 @@ footer strong {
     font-size: 15px;
   }
 
-  .scanCard {
+  .printCard {
     grid-template-columns: 1fr;
+
     max-width: 100%;
+
+    min-height: auto;
+
+    padding: 32px 24px;
+
+    gap: 32px;
+
     text-align: center;
-    padding: 22px;
   }
 
-  .scanCard h3 {
-    font-size: 30px;
+  .hexLogo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .purpleLine {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .printBrandBlock a {
+    margin: 0 auto;
   }
 
   .qrReal {
+    width: 100%;
+    max-width: 330px;
     height: auto;
-    max-width: 260px;
+    aspect-ratio: 1;
     margin: 0 auto;
   }
 
@@ -422,8 +520,8 @@ footer strong {
     font-size: 34px;
   }
 
-  .scanCard h3 {
-    font-size: 26px;
+  .printBrandBlock h3 {
+    font-size: 42px;
   }
 
   .infoPanel,
