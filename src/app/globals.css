@@ -60,7 +60,7 @@ body {
   left: 0;
   background-image: url("/side-left.png");
   background-size: cover;
-  background-position: center;
+  background-position: 22% center;
   border-right: 1px solid rgba(168, 85, 247, 0.35);
 }
 
@@ -68,7 +68,7 @@ body {
   right: 0;
   background-image: url("/side-right.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: 78% center;
   border-left: 1px solid rgba(168, 85, 247, 0.35);
 }
 
