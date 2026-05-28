@@ -538,3 +538,116 @@ footer strong {
     padding: 20px;
   }
 }
+
+/* For printing */
+
+@media print {
+  @page {
+    size: 3.5in 2in;
+    margin: 0;
+  }
+
+  html,
+  body {
+    width: 3.5in;
+    height: 2in;
+    margin: 0;
+    padding: 0;
+    background: white;
+    overflow: hidden;
+  }
+
+  .page {
+    width: 3.5in;
+    height: 2in;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    background: white;
+    overflow: hidden;
+  }
+
+  .sideArt,
+  .infoPanel,
+  .screenshots,
+  .bottomGrid,
+  footer,
+  .hero > .logoRow,
+  .hero > h1,
+  .hero > .subtitle,
+  .hero > .intro {
+    display: none !important;
+  }
+
+  .hero {
+    width: 3.5in;
+    height: 2in;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .printCard {
+    width: 3.5in;
+    height: 2in;
+    min-height: 0;
+    margin: 0;
+    padding: 0.16in 0.18in;
+    display: grid;
+    grid-template-columns: 1.65in 1.25in;
+    gap: 0.18in;
+    align-items: center;
+    border-radius: 0.12in;
+    box-shadow: none;
+  }
+
+  .printLogo {
+    width: 0.42in;
+    height: 0.42in;
+    padding: 0.02in;
+    border-radius: 0.06in;
+  }
+
+  .printBrandBlock {
+    grid-template-columns: 0.42in 1fr;
+    gap: 0.08in;
+    text-align: left;
+  }
+
+  .printBrandBlock h3 {
+    font-size: 10pt;
+    line-height: 0.95;
+    letter-spacing: 0.5px;
+  }
+
+  .purpleLine {
+    margin: 0.06in 0;
+  }
+
+  .printBrandBlock p {
+    font-size: 5.4pt;
+    line-height: 1.25;
+    text-align: left;
+  }
+
+  .printBrandBlock a {
+    margin: 0;
+    font-size: 5.8pt;
+    padding: 0.045in 0.08in;
+    border-radius: 0.04in;
+  }
+
+  .qrReal {
+    width: 1.25in;
+    height: 1.25in;
+    padding: 0.06in;
+    border-radius: 0.07in;
+    box-shadow: none;
+    overflow: hidden;
+  }
+
+  .qrReal canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
